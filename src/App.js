@@ -1,21 +1,16 @@
-import { useWasm } from "./useWasm";
+import React from "react";
 
-function App() {
-  // const instance = useWasm('my-wasm.wasm')
-  const {loaded, instance, error} = useWasm('tflite.wasm')//put tflite-simd for next wasm file
+import { useAsBind } from "use-as-bind";
+
+const App = () => {
+  const { loaded, instance, error } = useAsBind("tflite-simd.wasm");
   return (
-    <div className="App">
-      {/* {instance && 
-        instance.exports.addString('hello','wasm')
-      } */}
-      {loaded &&
-        instance.exports.addString('hello','wasm')
-      }
+    <div>
+      {loaded && instance.exports.addString("hello", "wasm")}
       {error && error.message}
     </div>
   );
-}
-
+};
 export default App;
 
 //HELP text for you:
