@@ -2,7 +2,7 @@ import { useWasm } from "./useWasm";
 
 function App() {
   // const instance = useWasm('my-wasm.wasm')
-  const {loaded, instance, error} = useWasm('my-wasm.wasm')
+  const {loaded, instance, error} = useWasm('tflite.wasm')//put tflite-simd for next wasm file
   return (
     <div className="App">
       {/* {instance && 
