@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { useAsBind } from "use-as-bind";
+import * as AsBind from "as-bind";
 
 export const useWasm = (fileName, imports) => {
         const [state, setState] = useState({

@@ -1,9 +1,10 @@
-import React from "react";
+import React, {StrictMode} from "react";
 
 import * as AsBind from "as-bind";
+import { useWasm } from "./useWasm";
 
 const App = () => {
-  const { loaded, instance, error } = AsBind("tflite-simd.wasm");
+  const { loaded, instance, error } = useWasm("tflite.wasm");
   return (
     <div>
       {loaded && instance.exports.addString("hello", "wasm")}
