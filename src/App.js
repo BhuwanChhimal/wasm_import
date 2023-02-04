@@ -1,6 +1,5 @@
 import React, {StrictMode} from "react";
 
-import * as AsBind from "as-bind";
 import { useWasm } from "./useWasm";
 
 const App = () => {
