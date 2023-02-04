@@ -1,9 +1,9 @@
 import React from "react";
 
-import { useAsBind } from "use-as-bind";
+import * as AsBind from "as-bind";
 
 const App = () => {
-  const { loaded, instance, error } = useAsBind("tflite-simd.wasm");
+  const { loaded, instance, error } = AsBind("tflite-simd.wasm");
   return (
     <div>
       {loaded && instance.exports.addString("hello", "wasm")}

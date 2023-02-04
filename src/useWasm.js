@@ -17,7 +17,7 @@ export const useWasm = (fileName, imports) => {
                     if (!wasm.ok) {
                         throw new Error("failed to fetch resource ${filename")
                     }
-                    const instance = await useAsBind.instantiate(wasm, imports);
+                    const instance = await AsBind.instantiate(wasm, imports);
                     if (!abortController.signal.aborted) {
                         setState({ instance, loaded: true, error: null });
                     }
